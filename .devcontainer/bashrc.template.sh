@@ -9,7 +9,6 @@ HISTFILE=~/.bash_history
 PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
 
 # don't put duplicate lines or lines starting with space in the history.
-# See bash(1) for more options
 HISTCONTROL=ignoreboth
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
@@ -27,7 +26,6 @@ fi
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
-
 
 # Define a list of items
 my_messages=(
