@@ -1,0 +1,27 @@
+name: ${PROJECT_NAME}
+services:
+  develop:
+    hostname: develop
+    build:
+      context: .
+      dockerfile: ./docker/dev/app.Dockerfile
+      args:
+        - DEV_CONTAINER_UID=${DEV_CONTAINER_UID}
+        - DEV_CONTAINER_GID=${DEV_CONTAINER_GID}
+    volumes:
+      - ".:/home/dev/code"
+      - ".devcontainer/.bash_history:/home/dev/.bash_history"
+    env_file:
+      - ./.env
+    ports:
+      - 5000:5000
+
+  # database:
+  #   image: postgres:17
+  #   env_file:
+  #     - ./.env
+  #   volumes:
+  #     - database-data:/var/lib/postgresql/data
+
+# volumes:
+#   database-data: {}
