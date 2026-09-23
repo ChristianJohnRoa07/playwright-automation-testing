@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "CommonJS",
+    "moduleResolution": "bundler",
+    "sourceMap": true,
+    "outDir": "dist",
+    "strict": true,
+    "types": ["node", "@playwright/test"]
+  },
+  "include": ["**/*.ts"]
+}
