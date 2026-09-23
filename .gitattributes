@@ -1,0 +1,13 @@
+# Auto-detect text files and handle line endings automatically
+* text=auto
+
+# Force LF (Unix) line endings for shell scripts and dev container files
+*.sh text eol=lf
+*.bash text eol=lf
+.bashrc text eol=lf
+.bash_profile text eol=lf
+
+# Dev Container & Docker configuration files
+Dockerfile* text eol=lf
+*.yaml text eol=lf
+*.json text eol=lf
